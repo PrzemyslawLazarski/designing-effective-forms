@@ -1,3 +1,62 @@
 .modal {
     background: #c6d0ff7a;
 }
+.row {
+    display: flex;
+    flex-direction: row;
+}
+/* Dodatkowe style dla podpowiedzi */
+.suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 0.25rem 0.25rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stylizacja formularza */
+.form-container {
+    padding-right: 15px;
+}
+
+/* Stylizacja opcji radio */
+.form-check {
+    margin-bottom: 0.5rem;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+/* Stylizacja komunikatów walidacji */
+.form-text.text-danger {
+    font-size: 0.875em;
+}
+
+/* Dostosowanie szerokości pól w jednej linii */
+.d-flex > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.d-flex > .me-3 {
+    margin-right: 1rem !important;
+}
+
+.d-flex .flex-equal {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.d-flex .flex-equal:last-child {
+    margin-right: 0;
+}
+
+/* Stylizacja nagłówków sekcji */
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
