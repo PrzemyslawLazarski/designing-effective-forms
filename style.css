@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: row;
 }
-/* Dodatkowe style dla podpowiedzi */
 .suggestions {
     max-height: 200px;
     overflow-y: auto;
@@ -16,12 +15,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Stylizacja formularza */
 .form-container {
     padding-right: 15px;
 }
 
-/* Stylizacja opcji radio */
 .form-check {
     margin-bottom: 0.5rem;
 }
@@ -30,12 +27,10 @@
     cursor: pointer;
 }
 
-/* Stylizacja komunikatów walidacji */
 .form-text.text-danger {
     font-size: 0.875em;
 }
 
-/* Dostosowanie szerokości pól w jednej linii */
 .d-flex > div {
     flex: 1;
     min-width: 0;
@@ -54,7 +49,6 @@
     margin-right: 0;
 }
 
-/* Stylizacja nagłówków sekcji */
 h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;

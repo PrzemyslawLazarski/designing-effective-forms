@@ -142,7 +142,7 @@ function validateZipCode() {
     } else {
         zipError.textContent = '';
         zipCodeInput.setCustomValidity('');
-        cityInput.focus(); // Automatyczne przejście do pola Miasto
+        cityInput.focus();
     }
 }
 
@@ -192,37 +192,31 @@ function selectRadioOption(groupName, index) {
         modalInstance.show();
     });
 
-    // Walidacja w czasie rzeczywistym
     emailInput.addEventListener('input', validateEmail);
     phoneInput.addEventListener('input', validatePhone);
     zipCodeInput.addEventListener('input', validateZipCode);
     vatNumberInput.addEventListener('input', validateVatNumber);
 
     document.addEventListener('keydown', (e) => {
-        // Shift + Enter: Przejście do poprzedniego pola
         if (e.shiftKey && e.key === 'Enter') {
             e.preventDefault();
             focusPreviousField(document.activeElement);
         }
 
-        // Ctrl + S: Wysłanie formularza
         if (e.ctrlKey && e.key === 's') {
             e.preventDefault();
             myForm.dispatchEvent(new Event('submit'));
         }
 
-        // Esc: Ukrycie podpowiedzi w polu kraju
         if (e.key === 'Escape') {
             suggestionsContainer.style.display = 'none';
         }
 
-        // Alt + 1-5: Przejście do sekcji
         if (e.altKey && e.key >= '1' && e.key <= '5') {
             e.preventDefault();
             focusSection(e.key);
         }
 
-        // Klawisze numeryczne dla pól radio
         if (document.activeElement.name === 'shippingMethod' && e.key >= '1' && e.key <= '3') {
             e.preventDefault();
             selectRadioOption('shippingMethod', parseInt(e.key) - 1);
